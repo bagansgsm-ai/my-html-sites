@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>毛泽东同志生平与思想 - 纪念网站</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --primary: #b71c1c;
+            --secondary: #ffd700;
+            --dark: #2c0a0a;
+            --light: #f9f3e9;
+            --gray: #e0e0e0;
+        }
+        body {
+            font-family: 'Noto Serif SC', serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: var(--light);
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f9f3e9" opacity="0.8"/><path d="M0 50L100 50M50 0L50 100" stroke="%23e0d6c0" stroke-width="0.5" stroke-opacity="0.3"/></svg>');
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 头部样式 */
+        header {
+            background: linear-gradient(to right, #b71c1c, #8b0000);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .site-title {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+        .site-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--secondary);
+        }
+        .years {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            font-weight: bold;
+        }
+        .years span {
+            margin: 0 10px;
+            position: relative;
+        }
+        .years span:after {
+            content: "—";
+            position: absolute;
+            right: -15px;
+        }
+        .years span:last-child:after {
+            display: none;
+        }
+        .quote {
+            font-style: italic;
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 15px;
+            border-left: 4px solid var(--secondary);
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 0 8px 8px 0;
+        }
+        /* 导航栏 */
+        nav {
+            background: var(--dark);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        .nav-container::-webkit-scrollbar {
+            display: none;
+        }
+        .nav-item {
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            white-space: nowrap;
+        }
+        .nav-item i {
+            margin-right: 8px;
+        }
+        .nav-item:hover, .nav-item.active {
+            background: var(--primary);
+            color: var(--secondary);
+        }
+        .nav-item:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
+        .nav-item:hover:after, .nav-item.active:after {
+            width: 80%;
+        }
+        /* 主要内容区 */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            padding: 40px 0;
+        }
+        .section {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+        }
+        .section-title {
+            background: linear-gradient(to right, var(--primary), #8b0000);
+            color: white;
+            padding: 20px 25px;
+            font-size: clamp(1.5rem, 3vw, 1.8rem);
+            display: flex;
+            align-items: center;
+        }
+        .section-title i {
+            margin-right: 12px;
+            color: var(--secondary);
+        }
+        .section-content {
+            padding: 25px;
+        }
+        /* 时间轴 */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--primary);
+            left: 50%;
+            margin-left: -2px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        .timeline-content {
+            position: relative;
+            width: 45%;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--primary);
+        }
+        .timeline-item:nth-child(odd) .timeline-content {
+            left: 0;
+        }
+        .timeline-item:nth-child(even) .timeline-content {
+            left: 55%;
+        }
+        .timeline-year {
+            position: absolute;
+            top: 15px;
+            width: 90px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        .timeline-item:nth-child(odd) .timeline-year {
+            right: -105px;
+        }
+        .timeline-item:nth-child(even) .timeline-year {
+            left: -105px;
+        }
+        .timeline-img {
+            margin-top: 12px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .timeline-img img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .timeline-img:hover img {
+            transform: scale(1.05);
+        }
+        /* 视频部分 */
+        .videos-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .video-card {
+            background: #f5f5f5;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .video-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+        .video-container {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background: #000;
+        }
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .video-title {
+            padding: 15px;
+            font-size: 1.1rem;
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            font-weight: 500;
+        }
+        /* 思想理论部分 */
+        .theory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .theory-card {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+        .theory-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .theory-title {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--secondary);
+        }
+        /* 诗词部分 */
+        .poem-section {
+            background: linear-gradient(rgba(255, 215, 0, 0.1), rgba(183, 28, 28, 0.1));
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        .poem-title {
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 18px;
+        }
+        .poem-content {
+            font-size: 1.1rem;
+            line-height: 2.0;
+            font-style: italic;
+        }
+        .poem-content p {
+            margin-bottom: 15px;
+        }
+        /* 书法展示 */
+        .calligraphy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+            margin: 25px 0;
+        }
+        .calligraphy-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .calligraphy-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        .calligraphy-img {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+        .calligraphy-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+        .calligraphy-item:hover .calligraphy-img img {
+            transform: scale(1.05);
+        }
+        .calligraphy-desc {
+            padding: 12px;
+            text-align: center;
+            background: #f9f9f9;
+        }
+        /* 页脚 */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 25px;
+            text-align: center;
+        }
+        .footer-title {
+            font-size: clamp(1.8rem, 4vw, 2.2rem);
+            margin-bottom: 25px;
+            color: var(--secondary);
+        }
+        .slogan {
+            font-size: clamp(1.5rem, 3.5vw, 1.8rem);
+            margin: 25px 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+        .contact-info {
+            font-size: 1rem;
+            margin: 18px 0;
+            line-height: 1.8;
+        }
+        .contact-info a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .copyright {
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* 音乐播放器样式 */
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 50px;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        .music-control {
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        .music-control:hover {
+            background: #8b0000;
+            transform: scale(1.1);
+        }
+        .music-info {
+            font-size: 0.9rem;
+            max-width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 900px) {
+            .timeline:before {
+                left: 30px;
+            }
+            .timeline-content {
+                width: auto;
+                margin-left: 70px;
+            }
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                left: 0;
+            }
+            .timeline-year {
+                position: relative !important;
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                margin: 0 auto 15px !important;
+                display: table;
+            }
+            .years span {
+                margin: 0 5px;
+            }
+            .years span:after {
+                right: -10px;
+            }
+        }
+        @media (max-width: 768px) {
+            .nav-container {
+                justify-content: flex-start;
+                padding: 0 10px;
+            }
+            .nav-item {
+                padding: 12px 15px;
+            }
+            .section-title {
+                padding: 18px 20px;
+            }
+            .section-content {
+                padding: 20px;
+            }
+            .main-content {
+                gap: 30px;
+                padding: 30px 0;
+            }
+            .years {
+                flex-direction: column;
+                align-items: center;
+            }
+            .years span:after {
+                display: none;
+            }
+            .years span {
+                margin: 5px 0;
+            }
+            .music-player {
+                bottom: 10px;
+                right: 10px;
+                padding: 8px 12px;
+            }
+            .music-info {
+                font-size: 0.8rem;
+                max-width: 150px;
+            }
+        }
+        @media (max-width: 480px) {
+            .videos-container {
+                grid-template-columns: 1fr;
+            }
+            .nav-item i {
+                display: none;
+            }
+            .timeline-year {
+                font-size: 0.9rem;
+                width: 80px;
+                height: 30px;
+                line-height: 30px;
+            }
+            .quote {
+                margin: 20px auto;
+            }
+            .calligraphy-grid {
+                grid-template-columns: 1fr;
+            }
+            .header-content {
+                padding: 10px;
+            }
+            .music-player {
+                bottom: 5px;
+                right: 5px;
+                padding: 6px 10px;
+            }
+            .music-control {
+                width: 35px;
+                height: 35px;
+                margin-right: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header>
+        <div class="header-content">
+            <h1 class="site-title">毛泽东同志生平与思想</h1>
+            <div class="site-subtitle">伟大的无产阶级革命家、战略家和理论家，中国共产党、中国人民解放军和中华人民共和国的主要创立者</div>
+            <div class="years">
+                <span>1893年12月26日</span>
+                <span>1976年9月9日</span>
+            </div>
+            <div class="quote">
+                "人民，只有人民，才是创造世界历史的动力。" —— 毛泽东
+            </div>
+        </div>
+    </header>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="container nav-container">
+            <a href="#life" class="nav-item active"><i class="fas fa-book-open"></i> 伟人生平</a>
+            <a href="#thought" class="nav-item"><i class="fas fa-brain"></i> 思想理论</a>
+            <a href="#works" class="nav-item"><i class="fas fa-book"></i> 著作文献</a>
+            <a href="#media" class="nav-item"><i class="fas fa-video"></i> 影像资料</a>
+            <a href="#poetry" class="nav-item"><i class="fas fa-pen"></i> 诗词书法</a>
+            <a href="#memory" class="nav-item"><i class="fas fa-monument"></i> 缅怀纪念</a>
+            <a href="#research" class="nav-item"><i class="fas fa-search"></i> 研究评价</a>
+            <a href="#links" class="nav-item"><i class="fas fa-link"></i> 相关链接</a>
+        </div>
+    </nav>
+    <!-- 主要内容区 -->
+    <div class="container main-content">
+        <!-- 伟人生平部分 -->
+        <section id="life" class="section">
+            <div class="section-title">
+                <i class="fas fa-book-open"></i> 伟人生平
+            </div>
+            <div class="section-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>求学与早期革命活动</h3>
+                            <p>1893年12月26日出生于湖南湘潭韶山冲。1911年考入湘乡驻省中学，受辛亥革命影响投笔从戎。1918年组织新民学会，同年在湖南第一师范学校毕业。1920年接受马克思主义思想。</p>
+                            <div class="timeline-img">
+                                <!-- 青年毛泽东图片 -->
+                                <img src="97879.jpg" alt="青年毛泽东">
+                            </div>
+                        </div>
+                        <div class="timeline-year">1893-1920</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>参加中共一大</h3>
+                            <p>1921年7月，作为湖南代表参加中国共产党第一次全国代表大会，成为中国共产党的创始人之一。会后任中共湘区委员会书记，领导长沙、安源等地工人运动。</p>
+                        </div>
+                        <div class="timeline-year">1921</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>井冈山斗争</h3>
+                            <p>1927年9月领导湘赣边界秋收起义，创建井冈山革命根据地，提出"工农武装割据"思想。1928年4月与朱德率领的南昌起义部队会师，成立工农革命军第四军。</p>
+                            <div class="timeline-img">
+                                <!-- 井冈山时期图片 -->
+                                <img src="979.jpg" alt="井冈山时期">
+                            </div>
+                        </div>
+                        <div class="timeline-year">1927-1934</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>长征</h3>
+                            <p>1934年10月，随中央红军开始长征。1935年1月遵义会议确立了毛泽东在党中央的领导地位。1935年10月率中央红军到达陕北，完成二万五千里长征。</p>
+                        </div>
+                        <div class="timeline-year">1934-1935</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>延安时期</h3>
+                            <p>1937年全面抗战爆发后，领导建立抗日民族统一战线。1942年领导全党开展整风运动，1945年主持召开中共七大，确立毛泽东思想为党的指导思想。</p>
+                            <div class="timeline-img">
+                                <!-- 延安时期图片 -->
+                                <img src="161.jpeg" alt="延安时期">
+                            </div>
+                        </div>
+                        <div class="timeline-year">1935-1947</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>解放战争与建国</h3>
+                            <p>1947年转战陕北，指挥全国解放战争。1949年3月主持召开中共七届二中全会，9月主持召开中国人民政治协商会议第一届全体会议。1949年10月1日，在天安门城楼宣告中华人民共和国成立。</p>
+                        </div>
+                        <div class="timeline-year">1947-1949</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 重大贡献部分 -->
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-medal"></i> 历史贡献
+            </div>
+            <div class="section-content">
+                <div class="theory-grid">
+                    <div class="theory-card">
+                        <h3 class="theory-title">革命领袖</h3>
+                        <p>领导新民主主义革命取得胜利，推翻帝国主义、封建主义和官僚资本主义三座大山，建立了中华人民共和国，实现了民族独立和人民解放。</p>
+                    </div>
+                    <div class="theory-card">
+                        <h3 class="theory-title">国家奠基人</h3>
+                        <p>确立社会主义基本制度，奠定了新中国政治、经济、文化基础，为当代中国发展进步奠定了根本政治前提和制度基础。</p>
+                    </div>
+                    <div class="theory-card">
+                        <h3 class="theory-title">思想理论家</h3>
+                        <p>创立了毛泽东思想，是马克思主义中国化的第一次历史性飞跃，其核心内容包括实事求是、群众路线、独立自主等。</p>
+                    </div>
+                    <div class="theory-card">
+                        <h3 class="theory-title">军事战略家</h3>
+                        <p>人民军队的主要缔造者之一，提出"枪杆子里面出政权"、"党指挥枪"的根本原则，创立人民战争思想。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 视频部分 -->
+        <section id="media" class="section">
+            <div class="section-title">
+                <i class="fas fa-video"></i> 珍贵历史影像
+            </div>
+            <div class="section-content">
+                <h3>官方影像资料</h3>
+                <div class="videos-container">
+                    <div class="video-card">
+                        <div class="video-container">
+                            <video controls poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='360' viewBox='0 0 640 360'><rect width='640' height='360' fill='%23b71c1c'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23ffffff'>毛主席在开国大典</text></svg>">
+                                <source src="mao_kaiguo.mp4" type="video/mp4">
+                                您的浏览器不支持视频播放
+                            </video>
+                        </div>
+                        <div class="video-title">开国大典（1949年10月1日）</div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container">
+                            <video controls poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='360' viewBox='0 0 640 360'><rect width='640' height='360' fill='%23b71c1c'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23ffffff'>毛主席与人民群众</text></svg>">
+                                <source src="mao_people.mp4" type="video/mp4">
+                                您的浏览器不支持视频播放
+                            </video>
+                        </div>
+                        <div class="video-title">与人民群众在一起（1958年）</div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container">
+                            <video controls poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='360' viewBox='0 0 640 360'><rect width='640' height='360' fill='%23b71c1c'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23ffffff'>毛主席重要演讲</text></svg>">
+                                <source src="mao_speech.mp4" type="video/mp4">
+                                您的浏览器不支持视频播放
+                            </video>
+                        </div>
+                        <div class="video-title">在中共八大上的重要讲话（1956年）</div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container">
+                            <video controls poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='360' viewBox='0 0 640 360'><rect width='640' height='360' fill='%23b71c1c'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23ffffff'>毛主席会见外宾</text></svg>">
+                                <source src="mao_foreign.mp4" type="video/mp4">
+                                您的浏览器不支持视频播放
+                            </video>
+                        </div>
+                        <div class="video-title">会见尼克松总统（1972年）</div>
+                    </div>
+                </div>
+                <h3 style="margin-top: 40px;">人民纪念影像</h3>
+                <div class="videos-container">
+                    <div class="video-card">
+                        <div class="video-container">
+                            <video controls poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='360' viewBox='0 0 640 360'><rect width='640' height='360' fill='%23b71c1c'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23ffffff'>韶山纪念活动</text></svg>">
+                                <source src="1754783214072.mp4" type="video/mp4">
+                                您的浏览器不支持视频播放
+                            </video>
+                        </div>
+                        <div class="video-title">毛主席接见人民群众</div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container">
+                            <video controls poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='360' viewBox='0 0 640 360'><rect width='640' height='360' fill='%23b71c1c'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23ffffff'>纪念堂献花</text></svg>">
+                                <source src="1754775201692.mp4" type="video/mp4">
+                                您的浏览器不支持视频播放
+                            </video>
+                        </div>
+                        <div class="video-title">亲密的战友</div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container">
+                            <video controls poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='360' viewBox='0 0 640 360'><rect width='640' height='360' fill='%23b71c1c'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23ffffff'>青年学生纪念</text></svg>">
+                                <source src="1754775314982.mp4" type="video/mp4">
+                                您的浏览器不支持视频播放
+                            </video>
+                        </div>
+                        <div class="video-title">他一笑 天都亮了</div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container">
+                            <video controls poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='360' viewBox='0 0 640 360'><rect width='640' height='360' fill='%23b71c1c'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23ffffff'>老兵回忆</text></svg>">
+                                <source src="1754783381251.mp4" type="video/mp4">
+                                您的浏览器不支持视频播放
+                            </video>
+                        </div>
+                        <div class="video-title">世界是你们的，也是我们的，但归根结底是你们的</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 思想理论部分 -->
+        <section id="thought" class="section">
+            <div class="section-title">
+                <i class="fas fa-brain"></i> 毛泽东思想
+            </div>
+            <div class="section-content">
+                <div class="theory-grid">
+                    <div class="theory-card">
+                        <h3 class="theory-title">新民主主义革命理论</h3>
+                        <p>科学分析中国社会的半殖民地半封建性质，提出无产阶级领导的、人民大众的、反对帝国主义、封建主义和官僚资本主义的革命理论，开创了农村包围城市、武装夺取政权的革命道路。</p>
+                    </div>
+                    <div class="theory-card">
+                        <h3 class="theory-title">军事战略思想</h3>
+                        <p>提出"枪杆子里面出政权"、"党指挥枪"的根本原则，创立人民战争思想，总结出游击战"十六字诀"（敌进我退，敌驻我扰，敌疲我打，敌退我追）和十大军事原则。</p>
+                    </div>
+                    <div class="theory-card">
+                        <h3 class="theory-title">党的建设理论</h3>
+                        <p>强调着重从思想上建党，提出"三大作风"（理论联系实际、密切联系群众、批评与自我批评），创造整风形式提高党的战斗力，保持党的先进性和纯洁性。</p>
+                    </div>
+                    <div class="theory-card">
+                        <h3 class="theory-title">群众路线</h3>
+                        <p>提出"一切为了群众，一切依靠群众，从群众中来，到群众中去"的根本工作路线，强调人民是历史的创造者，全心全意为人民服务是党的根本宗旨。</p>
+                    </div>
+                </div>
+                <div class="poem-section">
+                    <h3 class="poem-title">《实践论》选段</h3>
+                    <div class="poem-content">
+                        <p>"通过实践而发现真理，又通过实践而证实真理和发展真理。</p>
+                        <p>从感性认识而能动地发展到理性认识，又从理性认识而能动地指导革命实践，改造主观世界和客观世界。</p>
+                        <p>实践、认识、再实践、再认识，这种形式，循环往复以至无穷，而实践和认识之每一循环的内容，都比较地进到了高一级的程度。</p>
+                        <p>这就是辩证唯物论的全部认识论，这就是辩证唯物论的知行统一观。"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 诗词部分 -->
+        <section id="poetry" class="section">
+            <div class="section-title">
+                <i class="fas fa-pen"></i> 诗词与书法
+            </div>
+            <div class="section-content">
+                <div class="poem-section">
+                    <h3 class="poem-title">沁园春·雪</h3>
+                    <div class="poem-content">
+                        <p>北国风光，千里冰封，万里雪飘。</p>
+                        <p>望长城内外，惟余莽莽；大河上下，顿失滔滔。</p>
+                        <p>山舞银蛇，原驰蜡象，欲与天公试比高。</p>
+                        <p>须晴日，看红装素裹，分外妖娆。</p>
+                        <br>
+                        <p>江山如此多娇，引无数英雄竞折腰。</p>
+                        <p>惜秦皇汉武，略输文采；唐宗宋祖，稍逊风骚。</p>
+                        <p>一代天骄，成吉思汗，只识弯弓射大雕。</p>
+                        <p>俱往矣，数风流人物，还看今朝。</p>
+                    </div>
+                </div>
+                <div class="poem-section">
+                    <h3 class="poem-title">七律·长征</h3>
+                    <div class="poem-content">
+                        <p>红军不怕远征难，万水千山只等闲。</p>
+                        <p>五岭逶迤腾细浪，乌蒙磅礴走泥丸。</p>
+                        <p>金沙水拍云崖暖，大渡桥横铁索寒。</p>
+                        <p>更喜岷山千里雪，三军过后尽开颜。</p>
+                    </div>
+                </div>
+                <h3 style="margin-top: 40px;">书法艺术</h3>
+                <div class="calligraphy-grid">
+                    <div class="calligraphy-item">
+                        <div class="calligraphy-img">
+                            <img src="1754784725911.png" alt="沁园春·雪书法">
+                        </div>
+                        <div class="calligraphy-desc">《沁园春·雪》手迹</div>
+                    </div>
+                    <div class="calligraphy-item">
+                        <div class="calligraphy-img">
+                            <img src="1754784792056.png" alt="为人民服务题词">
+                        </div>
+                        <div class="calligraphy-desc">"为人民服务"题词</div>
+                    </div>
+                    <div class="calligraphy-item">
+                        <div class="calligraphy-img">
+                            <img src="1754784809076.png" alt="七律·长征书法">
+                        </div>
+                        <div class="calligraphy-desc">《七律·长征》手迹</div>
+                    </div>
+                    <div class="calligraphy-item">
+                        <div class="calligraphy-img">
+                            <img src="1754784872947.png" alt="向雷锋同志学习题词">
+                        </div>
+                        <div class="calligraphy-desc">"向雷锋同志学习"题词</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 缅怀纪念部分 -->
+        <section id="memory" class="section">
+            <div class="section-title">
+                <i class="fas fa-monument"></i> 缅怀纪念
+            </div>
+            <div class="section-content">
+                <h3>纪念场所</h3>
+                <ul style="margin: 20px 0 20px 40px; line-height: 2.0;">
+                    <li><strong>韶山毛泽东同志故居</strong>：湖南省湘潭市韶山市，毛泽东出生和成长的地方</li>
+                    <li><strong>毛主席纪念堂</strong>：北京市天安门广场，安放毛泽东遗体的纪念堂</li>
+                    <li><strong>延安革命纪念馆</strong>：陕西省延安市，展示毛泽东在延安时期的革命活动</li>
+                    <li><strong>井冈山革命博物馆</strong>：江西省井冈山市，展示毛泽东创建井冈山革命根据地的历史</li>
+                </ul>
+                <div style="background: #f9f9f9; padding: 25px; border-radius: 8px; margin-top: 30px;">
+                    <h3 style="margin-bottom: 20px; color: var(--primary);">在线缅怀</h3>
+                    <div style="text-align: center; margin: 30px 0;">
+                        <button id="flowerBtn" style="background: var(--primary); color: white; border: none; padding: 15px 40px; font-size: 1.1rem; border-radius: 5px; cursor: pointer; transition: all 0.3s ease;">
+                            <i class="fas fa-heart"></i> 向伟人献花
+                        </button>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <h4>留言板</h4>
+                        <textarea id="messageInput" style="width: 100%; height: 100px; padding: 15px; margin: 15px 0; border: 1px solid #ddd; border-radius: 5px; font-family: inherit;" placeholder="请在此留下您的缅怀之词..."></textarea>
+                        <button id="submitMessage" style="background: var(--primary); color: white; border: none; padding: 12px 30px; font-size: 1rem; border-radius: 5px; cursor: pointer; transition: all 0.3s ease;">
+                            提交留言
+                        </button>
+                        <div id="messageBoard" style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px;">
+                            <h4>缅怀留言</h4>
+                            <div id="messagesList" style="max-height: 200px; overflow-y: auto; margin-top: 15px;">
+                                <div class="message" style="background: white; padding: 10px 15px; margin-bottom: 10px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                                    <div style="font-weight: bold; color: var(--primary);">李同志</div>
+                                    <div style="margin-top: 5px;">毛泽东同志永远活在我们心中！</div>
+                                    <div style="font-size: 0.8rem; color: #777; margin-top: 5px;">2025年8月10日</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-title">永远怀念伟大领袖毛泽东同志</div>
+            <div class="slogan">2025年 我们是毛主席的好战士</div>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> 联系我们: <a href="mailto:18306554245@163.com">18306554245@163.com</a></p>
+                <p><i class="fas fa-phone"></i> 致敬我们伟大领袖毛主席万寿无疆</p>
+                <p><i class="fas fa-map-marker-alt"></i> 地址: 北京市毛主席纪念堂</p>
+            </div>
+            <div class="copyright">
+                <p>纪念伟大领袖毛泽东同志网站 © 2025 版权所有</p>
+                <p>本网站旨在传承红色基因，弘扬革命精神，所有内容仅供学习研究使用</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- 音乐播放器 -->
+    <div class="music-player">
+        <div class="music-control" id="musicToggle">
+            <i class="fas fa-play"></i>
+        </div>
+        <div class="music-info">东方红 - 正在播放</div>
+    </div>
+    
+    <!-- 音频元素 -->
+    <audio id="bgMusic" loop>
+        <source src="11111.mp3" type="audio/mp3">
+        您的浏览器不支持音频元素。
+    </audio>
+    
+    <script>
+        // 导航栏滚动效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                // 更新活动导航项
+                document.querySelectorAll('.nav-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                this.classList.add('active');
+                // 滚动到目标位置
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        // 监听滚动事件，更新活动导航项
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        // 视频播放控制（确保一次只播放一个视频）
+        const videos = document.querySelectorAll('video');
+        videos.forEach(video => {
+            video.addEventListener('play', function() {
+                // 暂停其他所有视频
+                videos.forEach(otherVideo => {
+                    if (otherVideo !== video && !otherVideo.paused) {
+                        otherVideo.pause();
+                    }
+                });
+            });
+        });
+        // 献花功能
+        const flowerBtn = document.getElementById('flowerBtn');
+        flowerBtn.addEventListener('click', function() {
+            this.innerHTML = '<i class="fas fa-check"></i> 已献花';
+            this.style.background = '#4CAF50';
+            this.disabled = true;
+            // 显示感谢信息
+            showMessage('<i class="fas fa-heart"></i> 感谢您的缅怀！', true);
+        });
+        
+        // 留言功能
+        const submitBtn = document.getElementById('submitMessage');
+        const messageInput = document.getElementById('messageInput');
+        const messagesList = document.getElementById('messagesList');
+        
+        submitBtn.addEventListener('click', function() {
+            const message = messageInput.value.trim();
+            if (message === '') {
+                showMessage('留言内容不能为空！', false);
+                return;
+            }
+            
+            // 创建新留言元素
+            const newMessage = document.createElement('div');
+            newMessage.className = 'message';
+            newMessage.style = "background: white; padding: 10px 15px; margin-bottom: 10px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);";
+            
+            const currentDate = new Date();
+            const dateStr = `${currentDate.getFullYear()}年${currentDate.getMonth()+1}月${currentDate.getDate()}日`;
+            
+            newMessage.innerHTML = `
+                <div style="font-weight: bold; color: var(--primary);">访客</div>
+                <div style="margin-top: 5px;">${message}</div>
+                <div style="font-size: 0.8rem; color: #777; margin-top: 5px;">${dateStr}</div>
+            `;
+            
+            // 添加到留言列表顶部
+            messagesList.insertBefore(newMessage, messagesList.firstChild);
+            
+            // 清空输入框
+            messageInput.value = '';
+            
+            // 显示成功消息
+            showMessage('留言提交成功！', true);
+        });
+        
+        // 显示消息提示
+        function showMessage(content, isSuccess) {
+            const messageDiv = document.createElement('div');
+            messageDiv.innerHTML = content;
+            messageDiv.style.position = 'fixed';
+            messageDiv.style.top = '20px';
+            messageDiv.style.right = '20px';
+            messageDiv.style.padding = '15px 25px';
+            messageDiv.style.background = isSuccess ? 'rgba(76, 175, 80, 0.9)' : 'rgba(183, 28, 28, 0.9)';
+            messageDiv.style.color = 'white';
+            messageDiv.style.borderRadius = '5px';
+            messageDiv.style.zIndex = '1000';
+            messageDiv.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+            messageDiv.style.animation = 'fadeIn 0.5s';
+            document.body.appendChild(messageDiv);
+            // 3秒后移除提示
+            setTimeout(() => {
+                messageDiv.style.animation = 'fadeOut 0.5s';
+                setTimeout(() => {
+                    document.body.removeChild(messageDiv);
+                }, 500);
+            }, 3000);
+        }
+        
+        // 添加CSS动画
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(-20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            @keyframes fadeOut {
+                from { opacity: 1; transform: translateY(0); }
+                to { opacity: 0; transform: translateY(-20px); }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // 音乐播放控制
+        const bgMusic = document.getElementById('bgMusic');
+        const musicToggle = document.getElementById('musicToggle');
+        const musicIcon = musicToggle.querySelector('i');
+        const musicInfo = document.querySelector('.music-info');
+        
+        // 尝试自动播放音乐
+        function playMusic() {
+            bgMusic.play()
+                .then(() => {
+                    musicIcon.classList.remove('fa-play');
+                    musicIcon.classList.add('fa-pause');
+                    musicInfo.textContent = "东方红 - 正在播放";
+                })
+                .catch(error => {
+                    console.log('自动播放失败:', error);
+                    musicInfo.textContent = "点击播放《东方红》";
+                });
+        }
+        
+        // 页面加载后尝试播放音乐
+        document.addEventListener('DOMContentLoaded', function() {
+            // 设置音量
+            bgMusic.volume = 0.5;
+            
+            // 尝试播放
+            setTimeout(playMusic, 1000);
+        });
+        
+        // 音乐切换控制
+        musicToggle.addEventListener('click', function() {
+            if (bgMusic.paused) {
+                bgMusic.play();
+                musicIcon.classList.remove('fa-play');
+                musicIcon.classList.add('fa-pause');
+                musicInfo.textContent = "东方红 - 正在播放";
+            } else {
+                bgMusic.pause();
+                musicIcon.classList.remove('fa-pause');
+                musicIcon.classList.add('fa-play');
+                musicInfo.textContent = "东方红 - 已暂停";
+            }
+        });
+        
+        // 音乐结束事件
+        bgMusic.addEventListener('ended', function() {
+            musicIcon.classList.remove('fa-pause');
+            musicIcon.classList.add('fa-play');
+            musicInfo.textContent = "东方红 - 点击播放";
+        });
+    </script>
+</body>
+</html>
